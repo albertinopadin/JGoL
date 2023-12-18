@@ -1,6 +1,6 @@
 package org.tino;
 
-import java.awt.Point;
+import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.List;
 
@@ -8,7 +8,9 @@ public class Cell {
     public Boolean alive;
 
     // TODO: Should I use Point or Point2D here?
-    public Point2D position;
+    public Point2D.Double position;
+
+    public Color color;
 
     public List<Cell> neighbors;
 
@@ -16,7 +18,15 @@ public class Cell {
 
     private Boolean nextState;
 
-    // TODO: Constructor
+    public Cell(Boolean alive, Point2D.Double position, Color color) {
+        this.position = position;
+        this.color = color;
+        if (alive) {
+            this.makeLive();
+        } else {
+            this.makeDead();
+        }
+    }
 
     private void setState(Boolean live) {
         this.currentState = live;
