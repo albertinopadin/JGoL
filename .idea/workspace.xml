@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef5846e1-01a9-4238-a85b-e41b0538541b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/tino/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tino/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tino/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tino/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tino/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702807974928</updated>
-      <workItem from="1702807976508" duration="14409000" />
+      <workItem from="1702807976508" duration="17653000" />
     </task>
     <servers />
   </component>
