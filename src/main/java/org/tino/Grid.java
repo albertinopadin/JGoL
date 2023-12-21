@@ -42,7 +42,7 @@ public class Grid {
         int bottomY = y + 1;
 
         if (leftX > -1) {
-            neighbors.add(this.cells[leftX + y&this.xCells]);
+            neighbors.add(this.cells[leftX + y*this.xCells]);
         }
 
         if (leftX > -1 && topY > -1) {
@@ -111,7 +111,7 @@ public class Grid {
         }
     }
 
-    public void randomState(Double liveProbability) {
+    public void randomize(Double liveProbability) {
         this.reset();
         for (int x = 0; x < this.xCells; x++) {
             for (int y = 0; y < this.yCells; y++) {
