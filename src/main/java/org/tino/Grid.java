@@ -2,16 +2,22 @@ package org.tino;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
 public class Grid {
-    private int xCells;
-    private int yCells;
+    private final int xCells;
+    private final int yCells;
     public int generation;
 
     public Cell[] cells;
+
+    private final int cellSize = 40;
+    private final int cellGap = 10;
+
+    private final int offset = 100;
 
     public Grid(int xCells, int yCells) {
         this.xCells = xCells;
@@ -20,7 +26,15 @@ public class Grid {
         this.cells = IntStream.range(0, xCells * yCells).mapToObj(i -> {
             int x = i % xCells;
             int y = i / xCells;
-            return new Cell(false, new Point2D.Double(x, y), Color.BLUE);
+            double absPos = this.cellSize + this.cellGap;
+            double xPoint = x*absPos;
+            double yPoint = y*absPos;
+            Rectangle2D shape = new Rectangle2D.Double(
+                    xPoint + offset,
+                    yPoint + offset,
+                    this.cellSize,
+                    this.cellSize);
+            return new Cell(false, shape, Color.BLUE);
         }).toArray(Cell[]::new);
         this.setNeighbors();
     }

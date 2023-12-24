@@ -1,14 +1,12 @@
 package org.tino;
 
 import java.awt.*;
-import java.awt.geom.Point2D;
 import java.util.List;
 
 public class Cell {
     public Boolean alive;
 
-    // TODO: Should I use Point or Point2D here?
-    public Point2D.Double position;
+    public Shape shape;
 
     public Color color;
 
@@ -18,8 +16,8 @@ public class Cell {
 
     private Boolean nextState;
 
-    public Cell(Boolean alive, Point2D.Double position, Color color) {
-        this.position = position;
+    public Cell(Boolean alive, Shape shape, Color color) {
+        this.shape = shape;
         this.color = color;
         if (alive) {
             this.makeLive();
