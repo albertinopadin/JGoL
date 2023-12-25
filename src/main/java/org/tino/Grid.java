@@ -34,7 +34,7 @@ public class Grid {
                     yPoint + offset,
                     this.cellSize,
                     this.cellSize);
-            return new Cell(false, shape, Color.BLUE);
+            return new Cell(false, shape, Color.BLUE, Color.BLACK);
         }).toArray(Cell[]::new);
         this.setNeighbors();
     }

@@ -17,6 +17,7 @@ public class GameFrame extends Frame {
     public GameFrame() {
         // Initialize Grid:
         this.grid = new Grid(xCells, yCells);
+        this.grid.randomize(0.5);
 
         // Initialize UI:
         setName("JGoL");

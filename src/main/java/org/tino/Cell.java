@@ -9,6 +9,8 @@ public class Cell {
     public Shape shape;
 
     public Color color;
+    private Color liveColor;
+    private Color deadColor;
 
     public List<Cell> neighbors;
 
@@ -16,9 +18,10 @@ public class Cell {
 
     private Boolean nextState;
 
-    public Cell(Boolean alive, Shape shape, Color color) {
+    public Cell(Boolean alive, Shape shape, Color liveColor, Color deadColor) {
         this.shape = shape;
-        this.color = color;
+        this.liveColor = liveColor;
+        this.deadColor = deadColor;
         if (alive) {
             this.makeLive();
         } else {
@@ -35,11 +38,13 @@ public class Cell {
     public void makeLive() {
         this.setState(true);
         // TODO: Modify cell color / appearance
+        this.color = this.liveColor;
     }
 
     public void makeDead() {
         this.setState(false);
         // TODO: Modify cell color / appearance
+        this.color = this.deadColor;
     }
 
     public Boolean needsUpdate() {
