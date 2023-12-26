@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef5846e1-01a9-4238-a85b-e41b0538541b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/tino/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tino/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tino/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tino/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tino/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tino/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tino/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tino/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +78,7 @@
     <attachedChunks>
       <set>
         <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-5f3ff201" />
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-203781b8" />
       </set>
     </attachedChunks>
   </component>
@@ -91,7 +91,8 @@
       <option name="presentableId" value="Default" />
       <updated>1702807974928</updated>
       <workItem from="1702807976508" duration="27320000" />
-      <workItem from="1703507768843" duration="774000" />
+      <workItem from="1703507768843" duration="2724000" />
+      <workItem from="1703612879990" duration="2918000" />
     </task>
     <servers />
   </component>

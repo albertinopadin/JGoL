@@ -14,10 +14,10 @@ public class Grid {
 
     public Cell[] cells;
 
-    private final int cellSize = 40;
-    private final int cellGap = 10;
+    private final int cellSize = 5;
+    private final int cellGap = 2;
 
-    private final int offset = 100;
+    private final int offset = 50;
 
     public Grid(int xCells, int yCells) {
         this.xCells = xCells;
@@ -34,7 +34,7 @@ public class Grid {
                     yPoint + offset,
                     this.cellSize,
                     this.cellSize);
-            return new Cell(false, shape, Color.BLUE, Color.BLACK);
+            return new Cell(false, shape, Color.GREEN, Color.BLACK);
         }).toArray(Cell[]::new);
         this.setNeighbors();
     }

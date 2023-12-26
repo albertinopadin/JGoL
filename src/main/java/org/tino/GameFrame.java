@@ -3,14 +3,13 @@ package org.tino;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.geom.Rectangle2D;
 
 public class GameFrame extends Frame {
     private static final int WIDTH = 960;
     private static final int HEIGHT = 620;
 
-    private final int xCells = 10;
-    private final int yCells = 10;
+    private final int xCells = 200;
+    private final int yCells = 200;
 
     private Grid grid;
 
@@ -35,6 +34,14 @@ public class GameFrame extends Frame {
     }
 
     @Override
+    public void update(Graphics g) {
+        this.grid.update();
+        // TODO: This really feels like a hack, but it's the only way I've found
+        //       to force a repaint:
+        this.paint(g);
+    }
+
+    @Override
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
 
@@ -43,14 +50,7 @@ public class GameFrame extends Frame {
                 int idx = x + y*this.xCells;
                 Shape shape = this.grid.cells[idx].shape;
                 Color color = this.grid.cells[idx].color;
-                g2d.setPaint(color);
-                g2d.draw(shape);
-                g2d.fill(shape);
-                Rectangle2D bounds = shape.getBounds2D();
-                g2d.setPaint(Color.RED);
-                g2d.drawString(String.valueOf(idx),
-                                (int) bounds.getCenterX(),
-                                (int) bounds.getCenterY());
+                drawShape2D(g2d, shape, color);
             }
         }
     }
